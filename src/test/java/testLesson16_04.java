@@ -14,7 +14,7 @@ public class testLesson16_04 {
             JsonPath response = RestAssured
                     .given()
                     .queryParams(params)
-                    .get("https://playground.learnqa.ru/api/hello" /*"https://playground.learnqa.ru/api/hello"*/)
+                    .get("https://playground.learnqa.ru/api/hello" )
                     .jsonPath();
 
             String answer = response.get("answer");
