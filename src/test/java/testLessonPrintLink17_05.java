@@ -1,12 +1,8 @@
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class testLesson17_05 {
+public class testLessonPrintLink17_05 {
     @Test
     public void testHelloWorldLesson17_05(){ // Необходимо написать тест, который создает GET-запрос
                                             // на адрес: https://playground.learnqa.ru/api/long_redirect

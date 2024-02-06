@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class testLesson20_08 {
+public class testLessonHeaders20_08 {
     @Test
     public void testHelloWorldLesson20_08(){
         Map<String,String> headers = new HashMap<>();

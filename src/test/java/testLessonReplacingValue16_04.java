@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class testLesson16_04 {
+public class testLessonReplacingValue16_04 {
         @Test
         public void testHelloWorldLesson16_04(){ //тест
             Map<String,String> params = new HashMap<>();
