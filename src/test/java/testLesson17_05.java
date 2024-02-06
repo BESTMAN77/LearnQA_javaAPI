@@ -8,17 +8,21 @@ import java.util.Map;
 
 public class testLesson17_05 {
     @Test
-    public void testHelloWorldLesson17_05(){ // В рамках этой задачи нужно создать тест, который будет делать GET-запрос на адрес https://playground.learnqa.ru/api/get_json_homework
+    public void testHelloWorldLesson17_05(){ // Необходимо написать тест, который создает GET-запрос
+                                            // на адрес: https://playground.learnqa.ru/api/long_redirect
+                                            //С этого адреса должен происходит редирект на другой адрес.
+                                             // Наша задача — распечатать адрес, на который редиректит указанные URL.
 
+        Response response = RestAssured
 
-        JsonPath response = RestAssured
+                .given()
+                .redirects()
+                .follow(false)
+                .get("https://playground.learnqa.ru/api/long_redirect")
+                .andReturn();
 
-                .get("https://playground.learnqa.ru/api/get_json_homework")
-                .jsonPath();
-
-
-
-        response.prettyPrint();
+        String locationHeader = response.getHeader("Location");
+        System.out.println(locationHeader);
 
     }
 }
