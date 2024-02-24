@@ -13,7 +13,7 @@ public class testLessonCookieGetAndPost21_09_01 {
     public void CookieGetAndPost(){
         Map<String,String> data = new HashMap<>();
         data.put("login", "secret_login");
-        data.put("password", "secret_pass1");
+        data.put("password", "secret_pass");
 
         Response responseForGet = RestAssured
                 .given()
@@ -23,6 +23,7 @@ public class testLessonCookieGetAndPost21_09_01 {
                 .andReturn();
 
         String responseCookie = responseForGet.getCookie("auth_cookie");
+        //System.out.println(responseCookie);
 
         Map<String, String> cookies = new HashMap<>();
         if(responseCookie != null) {
