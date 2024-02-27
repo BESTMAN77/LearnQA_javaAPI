@@ -13,10 +13,10 @@ public class parametrized23_02 {
 
     @ParameterizedTest
     @ValueSource(strings = {"", "John", "Adam"})
-    public void testHelloMetodWithoutName(String name){
+    public void testHelloMetodWithoutName(String name) {
         Map<String, String> quaeryParams = new HashMap<>();
 
-        if(name.length() > 0){
+        if (name.length() > 0) {
             quaeryParams.put("name", name);
         }
 
@@ -28,7 +28,7 @@ public class parametrized23_02 {
 
         String answer = response.getString("answer");
         String expectedName = (name.length() > 0) ? name : "someone";
-        assertEquals("Hello, " + expectedName, answer,"The answer is not expected");
+        assertEquals("Hello, " + expectedName, answer, "The answer is not expected");
 
     }
 }
